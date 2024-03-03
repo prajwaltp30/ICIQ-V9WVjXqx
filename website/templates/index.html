@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARDIO_CARE</title>
+
+    <script src="https://kit.fontawesome.com/c1df782baf.js"></script>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        :root{
+            --maincolor: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+            --secondcolor:#f8a803;
+            --thirdcolor:#f4ab01;
+            --textcolor:#4A5764;
+            --prajju:radial-gradient( circle farthest-corner at 22.4% 21.7%, rgba(4,189,228,1) 0%, rgba(2,83,185,1) 100.2% );
+            --dk:linear-gradient(to right, #0f0c29, #302b63, #24243e);
+        }
+        *{
+            margin:0; 
+            padding:0;
+            box-sizing: border-box;
+            outline: none; 
+            border:none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition:all .2s linear;
+            font-family: "Inter", sans-serif;
+        }
+        
+        html{
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            scroll-padding-top: 6rem;
+
+        }
+
+        body{
+            background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );
+height:100vh;
+        }
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 7%;
+            width: 100%;
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+            z-index: 1000;
+            background-color: (--maincolor);
+        
+        }
+        .logo{
+            width: 150px;
+        }
+        .logo img{
+            width: 100%;
+        }
+        .navbar a{
+            color: var(--textcolor);
+            font-size: 1.7rem;
+            margin: 1rem;
+            position: relative;
+            transition: 0.5s;
+        }
+        .navbar a:hover{
+            color: var(--maincolor);
+        }
+        
+        .navbar a::after{
+            content: "";
+            background-color: var(--maincolor);
+            width: 0;
+            position: absolute;
+            height: 0.2rem;
+            left: 0;
+            margin-top: 0.5rem;
+            top: 100%;
+            transition: 0.5s;
+        }
+        .navbar a:hover::after{
+            width: 100%;
+        }
+        
+        #menu-bars{
+            color: var(--textcolor);
+            font-size: 2.5rem;
+            cursor: pointer;
+            margin-right: 1rem;
+            display: none;
+        }
+        #menu-bars:hover{
+            color: var(--maincolor);
+        }
+        .right-icons .btn{
+        
+            padding: 1.2rem 2rem;
+            font-size: 1.7rem;
+            background: var(--maincolor);
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .right-icons .btn:hover{
+            background-color: var(--secondcolor);
+        }
+        
+        /* header section ended */
+        
+        /* Home section started */
+        
+        .main-home{
+            padding: 2rem 7%;
+            background-image: url(images/blurbg1.jpg);
+            width: 100%;
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .home{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 6rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .home .home-left-content{
+            flex: 1 1 40rem;
+            margin-top:50px;
+           
+        }
+        
+        .home-left-content span{
+            font-size: 2rem;
+            color: var(--maincolor);
+            padding: 1rem 0;
+            font-weight: bolder;
+
+            
+        }
+        .home-left-content h2{
+            font-size: 48px;
+            margin-top:50px;
+            margin-bottom:50px;
+            
+        }
+        .home-left-content p{
+            font-size: 1.7rem;
+            color: var(--textcolor);
+            line-height: 3rem;
+            margin-top:50px;
+            margin-bottom:50px;
+        }
+        
+        .home-btn{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .home-btn a{
+            display: inline-block;
+            padding: 1.5rem 3rem;
+            background-color: var(--maincolor);
+            font-size: 1.7rem;
+            color: white;
+            transition: 0.5s ease;
+        }
+        .home-btn a:hover{
+            padding: 1.5rem 2.5rem;
+        }
+        
+        #startsss{
+           height:52px;
+           width:200px;
+           background-color:linear-gradient(to right, blue,red,orange);
+           border: 1px solid var(--maincolor);
+
+
+           background: linear-gradient(to right,rgb(132, 222, 255), rgb(132, 222, 255));
+           text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+           border-radius: 8px;
+           color: solid black;
+           border: 2px solid white;
+           cursor:pointer;
+        }
+     
+     
+        
+
+        .homebtnsec{
+            background:transparent !important;
+            color: var(--textcolor) !important;
+            border: 1px solid var(--maincolor);
+        }
+        .homebtnsec:hover{
+            background-color: var(--secondcolor) !important;
+            color: white !important;
+        }
+        
+        .home .home-right-content{
+            flex: 1 1 50rem;
+        }
+        
+        .home .home-right-content img{
+            width: 10%;
+            margin-top: 4rem;
+        }
+        
+        .technology{
+            padding: 3rem 7%;
+        }
+        
+        .main-technology{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 3rem;
+            margin-top: -100px;
+        }
+        .inner-technology{
+            flex: 1 1 300px;
+            padding: 3rem 3rem;
+            box-shadow: rgba(0, 0, 0, 50) 0px 3px 8px;
+            background-image: url(images/backgroung-pattern-1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            background: linear-gradient(to right,rgb(132, 222, 255), white,rgb(132, 222, 255));
+
+            position: relative;
+            z-index: 1;
+
+            display:flex;
+        }
+      
+        .inner-technology span{
+            width: 0;
+            height: 100%;
+            background-color: var(--maincolor);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: 0.5s;
+            
+        }
+        .inner-technology:hover span{
+            width: 100%;
+        }
+        
+        
+        .inner-technology:hover i{
+            
+            color: white;
+        }
+        .inner-technology:hover h2{
+            color: white;
+        }
+        .inner-technology:hover p{
+            color: white;
+        }
+        .inner-technology i{
+            font-size: 48px;
+            color: var(--maincolor);
+        }
+        
+        .inner-technology h2{
+            font-size: 2.5rem;
+            padding: 1rem 0;
+        }
+        .inner-technology p{
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            padding: 1rem 0;
+         
+        }
+        
+        
+        
+        /* home section will end */
+      
+        
+        .about-inner-content-left{
+            flex: 1 1 40rem;
+        }
+        .about-inner-content-left img{
+            width: 90%;
+            padding: 2rem;
+        }
+        .about-inner-content{
+            flex: 1 1 45rem;
+        }
+        .about-inner-content img{
+            width: 100%;
+        }
+        .about-right-content h2{
+            font-size: 30px;
+            padding: 1.5rem 0;
+            color: black;
+            font-weight: bolder;
+            line-height: 4rem;
+        }
+        .about-right-content p{
+            font-size: 1.5rem;
+            padding: 1.5rem 0;
+            color: var(--textcolor);
+            font-family: "Inter", sans-serif;
+            text-align: left;
+            line-height: 2.5rem;
+        }
+        .aboutsec-content{
+            line-height: 2.5rem !important;
+        }
+        .aboutbtn{
+            padding: 1.5rem 3rem;
+            background-color: transparent;
+            border: 1px solid var(--maincolor);
+            margin-top: 0.5rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: 0.5s all;
+        }
+        .aboutbtn:hover{
+            background-color: var(--secondcolor);
+            color: white;
+            border:none;
+            padding: 1.5rem 3.5rem;
+        }
+        .main-doctors{
+            padding: 2rem 7%;
+            background-image: url(images/backgroung-pattern-3.png);
+            background-color: #f5f5f5;
+            width: 100%;
+            
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+      
+     
+        
+      #cc{
+        font-size:50px;
+        margin-left: 50px;
+        margin-bottom:5px;
+        background-color:var(--maincolor);
+      }
+        
+    #cc:hover{
+      color:white;
+
+    }
+        
+        
+        
+    #text-container {
+        display: inline-block;
+        position: relative;
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+    }
+
+    #cursor {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2px; /* Cursor width */
+        height: 1em; /* Adjust height to match line height */
+        background-color: black; /* Cursor color */
+        animation: cursorAnimation 1s infinite;
+    }
+
+    @keyframes cursorAnimation {
+        0%, 50% {
+            background-color: black;
+        }
+        51%, 100% {
+            background-color: transparent;
+        }
+    }
+
+    .blinking-text {
+        font-size: 5em; /* Adjust the font size as needed */
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+        margin-left:400px;
+    }
+     
+    .names{
+        height:100px;
+        width:1200px;
+        margin-left:100px;
+        margin-bottom:-1000px;
+        flex: 1 1 300px;
+        padding: 3rem 3rem;
+        box-shadow: rgba(0, 0, 0, 50) 0px 3px 5000px;
+        background-image: url(images/backgroung-pattern-1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        background: linear-gradient(to right,rgb(132, 222, 255), white,rgb(132, 222, 255));
+
+        position: relative;
+        z-index: 1;
+
+        display:flex;    
+    }
+    #text{
+        font-size: 2em; 
+    }
+    /* Chatbot button and window styles */
+    
+    .chatbot-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999; /* Set a higher z-index value */
+        animation: floatAnimation 3s infinite alternate;
+      }
+  
+      @keyframes floatAnimation {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      .chatbot-button {
+        position: relative;
+        z-index: 1;
+        background-color: rgb(0,0,0);
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+  
+      .chatbot-button::before {
+        content: '\1F916'; /* Robot emoji */
+        margin-right: 10px;
+      }
+  
+      .chatbot-window {
+        display: none;
+        position: relative;
+        bottom: 80px;
+        right: 20px;
+        width: 300px;
+        background-color: #f4f4f4;
+        border-radius: 10px;
+        padding: 10px;
+      }
+  
+      .chatbot-messages {
+        height: 200px;
+        overflow-y: scroll;
+        margin-bottom: 10px;
+      }
+  
+      .user {
+        color: blue;
+      }
+  
+      .bot {
+        color: green;
+      }
+  
+      .user-message::before {
+        content: 'You: ';
+        font-weight: bold;
+      }
+  
+      .bot-message::before {
+        content: 'Bot: ';
+        font-weight: bold;
+      }
+  
+      .user-message,
+      .bot-message {
+        margin-bottom: 5px;
+      }
+  
+      .user-input {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+  
+      .send-button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body> 
+    <div class="chatbot-container">
+        <button class="chatbot-button" onclick="toggleChat()">Chat</button>
+        <div class="chatbot-window" id="chatbot-window">
+          <div class="chatbot-messages" id="chatbot-messages"></div>
+          <input type="text" class="user-input" id="user-input" placeholder="Type your message...">
+          <button class="send-button" onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+    
+    <script>
+    
+    
+    
+    // Toggle chatbot window visibility
+    function toggleChat() {
+      var chatbotWindow = document.getElementById("chatbot-window");
+      var otherChatButton = document.getElementById("other-chat-button"); // Add the ID of the other chat button
+    
+      if (chatbotWindow.style.display === "none") {
+        chatbotWindow.style.display = "block";
+        otherChatButton.style.display = "none"; // Hide the other chat button
+      } else {
+        chatbotWindow.style.display = "none";
+        otherChatButton.style.display = "block"; // Show the other chat button
+      }
+    }
+    
+    // Send user message and receive bot response
+    function sendMessage() {
+      var userInput = document.getElementById("user-input");
+      var userMessage = userInput.value;
+      userInput.value = "";
+    
+      // Display user message in chat window
+      displayMessage(userMessage, "user");
+    
+      // Process user message and generate bot response
+      var botResponse = generateBotResponse(userMessage);
+    
+      // Display bot response in chat window
+      displayMessage(botResponse, "bot");
+    }
+    
+    // Display message in the chat window
+    function displayMessage(message, sender) {
+      var chatbotMessages = document.getElementById("chatbot-messages");
+      var messageElement = document.createElement("div");
+      messageElement.classList.add("message");
+      messageElement.classList.add(sender);
+      messageElement.classList.add(sender + "-message");
+      messageElement.innerHTML = message;
+      chatbotMessages.appendChild(messageElement);
+    
+      // Scroll to the latest message
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+    
+    // Generate bot response based on user message
+    function generateBotResponse(userMessage) {
+      // Example FAQs and their responses
+      var faqs = {
+    
+        "hi": "Hello! I'm Saakshi. How can I help you?",
+        "how to start": "To get started, simply activate your webcam and follow the instructions on our platform.",
+        "how i get results": "Once you've completed the assessment, your results will be generated automatically and displayed on your screen.",
+        "is it safe to use": "Yes, our platform is designed with user safety in mind. We ensure the security and privacy of your data.",
+        "how did u built this": "Our platform was built by a team of experts in healthcare and technology. We leveraged advanced algorithms and AI to create an accurate and reliable solution.",
+        "what parameters do you measure": "We measure vital parameters such as Heart rate, Heart rate variability (HRV), Sympathetic stress, Blood Pressure (BP), Oxygen saturation, Breathing Rate, PRQ (Physical Recovery Quotient), and Parasympathetic Activity.",
+        "how accurate are the predictions": "Our predictions are based on extensive research and analysis of medical data. While we strive for accuracy, it's important to consult with a healthcare professional for a comprehensive evaluation.",
+        "what if my condition is critical": "If your condition is critical, you can easily contact a doctor through our platform for immediate assistance.",
+        "how often should I use this platform": "We recommend using our platform regularly to monitor your health status and track any changes over time. However, please consult with a healthcare professional for personalized advice.",
+        "can I use this platform for my family members": "Yes, you can use our platform to monitor the health of your family members. Simply create separate profiles for each individual.",
+        "is there a mobile app available": "Currently, we offer our services through a web-based platform. However, we are working on developing a mobile app for added convenience.",
+      
+      };
+    
+      var response = faqs[userMessage];
+    
+      if (response) {
+        return response;
+      } else {
+        return "Our experts will get in touch with you soon to address your question in more detail.";
+      }
+    }
+     </script>
+    <header>
+        
+        <div class="logo"><img src="images/logo3.png" alt=""></div>
+
+        <nav class="navbar">
+            <a href="#Home">Home</a>
+            <a href="#Home">About</a>
+            <a href="#Home">Service</a>
+            <a href="#Home">Blog</a>
+            <a href="#Home">Contact</a>
+        </nav>
+
+        <div class="right-icons">
+            <div id="menu-bars" class="fas fa-bars"></div>
+            <div class="btn">Login / Signup</div>
+        </div>
+
+    </header>
+
+    <!-- header section ended -->
+
+    <!-- Home section started -->
+
+        <div class="main-home">
+
+            <div class="home">
+                <div class="home-left-content">
+                    <span>welcome to Your Virtual Hospital </span>
+                    <h2>We take care of <br></h2>
+                    <div id="text-container">
+                        <span id="text"></span><span id="cursor"></span>
+                    </div>
+                    <p class="lorem">Advancing Heart Health Using Cutting Edge Technology And AI</p>
+                
+                        <div class="home-btn">
+
+                            <form action="/start" method="post">
+                                <button id="startsss"  type="submit">Start Monitoring</button>
+                            </form>
+
+
+                            <form action="/results" method="get">
+                                <button   id="startsss" type="submit">result</button>
+                            </form>
+                                                </div>
+                        
+                    </div>
+
+                <div class="home-right-content">
+                    <div class="inner-technology">
+                        <span></span>
+                        <i class="fi fi-tr-hands-heart"></i>
+                        <h1 id="cc">CARDIO_CARE</h1>
+                    </div>
+                    <img src="images/hero2.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+    
+
+   
+    
+        <script>
+            const phrases1 = ["Your Heart's Health", "Your Mental Health"];
+            let index1 = 0;
+            let charIndex1 = 0;
+            let direction1 = 1; // 1 for writing, -1 for erasing
+            const delay1 = 100; // Delay between writing/erasing characters (in milliseconds)
+            
+            function writeAndErase() {
+                const textElement = document.getElementById('text');
+                const currentPhrase = phrases1[index1];
+                const currentText = currentPhrase.substring(0, charIndex1);
+                textElement.textContent = currentText;
+            
+                charIndex1 += direction1;
+            
+                if (charIndex1 === currentPhrase.length + 1) {
+                    direction1 = -1;
+                    charIndex1--;
+                } else if (charIndex1 === 0) {
+                    direction1 = 1;
+                    index1 = (index1 + 1) % phrases1.length;
+                }
+            
+                setTimeout(writeAndErase, delay1);
+            }
+            
+            writeAndErase();
+            
+            const phrases2 = ["HRUTHWIK M", "PRAJWAL T P", "P O O J A"];
+            let index2 = 0;
+            const blinkDelay = 2000; // Delay between phrases (in milliseconds)
+            const eraseDelay = 1000; // Delay before erasing (in milliseconds)
+            
+            function blinkAndErase() {
+                const textElement = document.getElementById('textx');
+                textElement.textContent = phrases2[index2];
+                setTimeout(eraseText, blinkDelay);
+            }
+            
+            function eraseText() {
+                const textElement = document.getElementById('textx');
+                textElement.style.opacity = 0;
+                setTimeout(nextPhrase, eraseDelay);
+            }
+            
+            function nextPhrase() {
+                index2 = (index2 + 1) % phrases2.length;
+                const textElement = document.getElementById('textx');
+                textElement.style.opacity = 1;
+                setTimeout(blinkAndErase, 500); // Delay before next blinking starts (smooth transition)
+            }
+            
+            blinkAndErase();
+                    
+        </script>
+    
+    </body>
+</html>
