@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <style>
+        * {
+    font-family: system-ui;
+}
+
+body {
+    padding: 0 1rem;
+    background: #fdf8f4;
+    display:flex;
+}
+
+.page-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.layout {
+    display: grid;
+    gap: 2rem;
+}
+
+.layout span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 9px 27.09px rgba(176, 190, 197, 0.25), 0 7px 5.64px rgba(176, 190, 197, 0.25);
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.Report-graph {
+    background: url('final_graph.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center left;
+    height: 85vh;
+    filter: drop-shadow(5px 10px 5.64px rgba(176, 190, 197, 0.5));
+    position: relative;
+}
+
+
+#reportt{
+    margin-top:150px;
+   
+
+}
+
+#predict{
+height:50px;
+width:250px;
+
+border-radius:20%;
+cursor:pointer;
+}
+
+
+.Report-graph img {
+    opacity: 0; /* Hide the image when it loads successfully */
+}
+    </style>
+    
+</head>
+<body>
+    <h1>FINAL REPORT</h1>
+    <pre>{{ final_readings }}</pre>
+
+    <img id="reportt" src="{{ url_for('static', filename='final_graph.png') }}" alt="Additional Graph">
+
+
+
+    <a href="http://127.0.0.1:3005"><button id="predict" >click</button></a>   
+
+
+</body>
+</html>
