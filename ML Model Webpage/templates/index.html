@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Attack Risk Prediction</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: grid;
+    grid-gap: 7px;
+    width: 50%;
+    margin-left: 380px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+    
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+select {
+    appearance: none;
+    padding-right: 25px;
+    background-image: linear-gradient(45deg, transparent 50%, #ccc 50%), linear-gradient(135deg, #ccc 50%, transparent 50%);
+    background-position: calc(100% - 12px) calc(0.5em + 2px), calc(100% - 8px) calc(0.5em + 2px);
+    background-size: 8px 8px, 8px 8px;
+    background-repeat: no-repeat;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Heart Attack Risk Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="sex">Sex:</label>
+        <select id="sex" name="sex" required>
+            <option value="0">Female</option>
+            <option value="1">Male</option>
+        </select><br><br>
+
+        <label for="heart_rate">Heart Rate:</label>
+        <input type="number" id="heart_rate" name="heart_rate" required><br><br>
+
+        <label for="diabetes">Diabetes:</label>
+        <select id="diabetes" name="diabetes" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <label for="family_history">Family History:</label>
+        <select id="family_history" name="family_history" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <label for="smoking">Smoking:</label>
+        <select id="smoking" name="smoking" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <label for="obesity">Obesity:</label>
+        <select id="obesity" name="obesity" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <label for="alcohol_consumption">Alcohol Consumption:</label>
+        <select id="alcohol_consumption" name="alcohol_consumption" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <label for="exercise_hours_per_week">Exercise Hours Per Week:</label>
+        <input type="number" id="exercise_hours_per_week" name="exercise_hours_per_week" required><br><br>
+
+        <label for="diet">Diet:</label>
+        <select id="diet" name="diet" required>
+            <option value="0">Poor</option>
+            <option value="1">Average</option>
+            <option value="2">Healthy</option>
+        </select><br><br>
+
+        <label for="previous_heart_problems">Previous Heart Problems:</label>
+        <select id="previous_heart_problems" name="previous_heart_problems" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <label for="medication_use">Medication Use:</label>
+        <select id="medication_use" name="medication_use" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <label for="stress_level">Stress Level:</label>
+        <input type="number" id="stress_level" name="stress_level" min="0" max="10" required><br><br>
+
+        <label for="bmi">BMI:</label>
+        <input type="number" id="bmi" name="bmi" step="0.01" required><br><br>
+
+        <label for="physical_activity_days_per_week">Physical Activity Days Per Week:</label>
+        <input type="number" id="physical_activity_days_per_week" name="physical_activity_days_per_week" required><br><br>
+
+        <label for="sleep_hours_per_day">Sleep Hours Per Day:</label>
+        <input type="number" id="sleep_hours_per_day" name="sleep_hours_per_day" step="0.1" required><br><br>
+
+        <label for="bp1">Blood Pressure (BP1):</label>
+        <input type="number" id="bp1" name="bp1" required><br><br>
+
+        <label for="bp2">Blood Pressure (BP2):</label>
+        <input type="number" id="bp2" name="bp2" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
